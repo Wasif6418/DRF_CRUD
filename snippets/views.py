@@ -42,7 +42,7 @@ class SnippetList(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 class SnippetDetail(mixins.RetrieveModelMixin,mixins.UpdateModelMixin,mixins.DestroyModelMixin,generics.GenericAPIView):
-    queryset = Snippet.objects.all()
+    queryset     = Snippet.objects.all()
     serializer_class = SnippetSerializer
 
 
